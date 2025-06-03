@@ -49,7 +49,7 @@ function CampaignActions({ message, setMessage, customers, saveSegment, segmentR
 
   const sendEmailCampaign = async () => {
     try {
-      await axios.post("http://localhost:5000/send-campaign", {
+      await axios.post("https://minicrm-w11t.onrender.com/send-campaign", {
         message,
         recipients: customers.map((c) => c.email),
       });
