@@ -9,7 +9,7 @@ const Login = () => {
     console.log('Logged in user:', decoded);
     alert(`Welcome, ${decoded.name}`);
     window.location.href = '/dashboard'; 
-    // Add routing or storage here
+   
   };
 
   return (
@@ -18,12 +18,15 @@ const Login = () => {
         <h2>Admin Login</h2>
         <p className="subtitle">Sign in with Google to access your dashboard</p>
         <div className="google-btn">
+          <center>
           <GoogleLogin
             onSuccess={handleLoginSuccess}
             onError={() => console.log('Login Failed')}
             theme="outline"
             size="large"
+            
           />
+          </center>
         </div>
       </div>
     </div>

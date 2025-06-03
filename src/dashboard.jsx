@@ -14,6 +14,7 @@ function Dashboard() {
     async function fetchAllData() {
       try {
         const res = await axios.get(process.env.REACT_APP_BACK);
+        console.log("🚀 Data fetched:", res.data);
         setData(res.data);
       } catch (err) {
         setError(err.message || "Error fetching data");
