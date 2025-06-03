@@ -47,7 +47,7 @@ app.post('/save/orders', async (req, res) => {
 app.get('/', (req, res) => {
   res.send('🚀 Xeno CRM API is running');
 });
-
+  
 app.get('/alldata', async (req, res) => {
   try {
     const ordersWithCustomers = await Order.find().populate('customerId');
